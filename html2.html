@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{width: 600px;/*height: 600px;*/background-color: #ccc;display: flex;
+            /*主軸方向(正常-由左至右)*/ flex-direction: row;
+            /*交叉軸方向(正常-由上至下)*/ flex-wrap: wrap;
+            /*子物件對主軸的方向與位置*/ justify-content: center;
+            /*子物件距隔(超過區域寬度會換行)*/gap: 20px;}
+        .child{width: 150px;height: 150px;background-color: #f00;font-size: 50px;color: #fff;
+            /*margin: 2px;*/}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+    </div>
+</body>
+</html>
