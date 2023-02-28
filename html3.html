@@ -7,20 +7,30 @@
     <title>Document</title>
     <style>
         *{
-
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            margin-top: 20px;
         }
         nav ul{
-            gap: 10px;
+            display: flex; /*相對位置*/
+            justify-content: center; /*主軸排版-置中*/
+            gap: 10px; /*子物件間隔*/
         }
         nav li{
-            list-style: 1000;
+            list-style: none; /*表單類型-無*/
         }
         nav a{
-            display: block;
+            display: block; /*絕對位置*/
             padding: 10px 20px;
             border-top: 1px solid #000;
             border-bottom: 1px solid #000;
             color: #666;
+            text-decoration: none; /*文字底線-無*/
+            }
+            nav a:hover{ /*若指向a則底線顯示*/
+                text-decoration: underline;
             }
     </style>
 </head>
