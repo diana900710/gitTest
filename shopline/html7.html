@@ -15,8 +15,9 @@
         display: flex;
         justify-content: space-between;
     }
+    /* 選取器-分類class="item"的奇偶數(odd為奇數) */
     .item:nth-child(odd){
-        flex-direction: row-reverse;
+        flex-direction: row-reverse; /*主軸方向-由右至左*/
     }
     .item .pic{
         width: 400px;
@@ -33,17 +34,18 @@
         flex-wrap: wrap;
         padding: 20px;
     }
-    .item li{
+    .item li{ /*分2欄則寬分半*/
         width: 250px;
-        padding: 5px 0px;
+        padding: 5px 0px; /*li上下之間分隔*/
     }
-    ul li::marker{
+    ul li::marker{ /*表單的點-重設*/
         color: deepskyblue;
         font-size: 25px;
     }
     .text a{
         color: deepskyblue;
-        text-decoration: none;
+        text-decoration: none; /*a的底線-無*/
+        border-bottom: 1px solid deepskyblue;
     }
 </style>
 <body>
@@ -63,7 +65,9 @@
                     <li>獨有網址 ＆ SSL 安全憑證</li>
                     <li>開放 HTML／CSS 編輯</li>
                 </ul>
-                <a href="#">看看開店祕笈</a>
+                <nav>
+                    <a href="#">看看開店祕笈</a>
+                </nav>
             </div>
         </div>        
         <div class="item">
