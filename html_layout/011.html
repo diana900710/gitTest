@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 600px;
+            height: 600px;
+            background-color: #ccc;
+            display: flex;
+            /* flex-wrap: wrap; */
+            /*align-content: space-between;/*子物件在交叉軸的位置(在wrap存在的情況下)*/
+            /*align-items: end;/*子物件在彈性空間的位置*/
+        }
+        .item{
+            /* width: 0px; */
+            height: 160px;
+            background-color: red;
+            margin: 2px;
+            font-size: 50px;
+            /*flex-grow: 1;/*剩餘空間給予*/
+            /*transition: 1s;/*動畫時間*/
+            flex-shrink: 0; /*內部子物件-0不收縮*/
+        }
+        .item:hover{
+            flex-grow: 2;/*剩餘空間給予-比其他多1倍*/
+        }
+        .item:first-child{
+            /* height: 200px; */
+        }
+        
+        /*order排序*/
+        .item2{
+            /* order: 2; */
+            /* flex-grow: 1; */
+            width: 400px;
+        }
+        .item1,.item3{
+            /* order: 1; */
+            width: 150px;
+        }
+        /* .item5{
+            order: -1;
+        } */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <!-- <div class="item item4">4</div>
+        <div class="item item5">5</div> -->
+    </div>
+</body>
+</html>

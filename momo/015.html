@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tag{
+            background-color: #fa0;
+            color: #fff;
+            width: fit-content;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .tag::after{
+            content: '';
+            position: absolute; /*絕對位置*/
+            left: 1%;
+            top: 5.5%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid #0000;/*透明*/
+            border-top: 5px solid #f00;/*標籤摺痕*/
+        }
+    </style>
+</head>
+<body>
+    <div class="tag">
+        momo精選
+    </div>
+</body>
+</html>

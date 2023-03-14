@@ -23,6 +23,7 @@
         }
         .card img {border-radius: 100px;}
         .card div {
+            width: 280px;
             padding: 5px;
             border: 1px solid blue;
             display: flex;
@@ -30,6 +31,58 @@
             justify-content: space-between; /*子物件和主軸對齊-物件之間保持相等距離*/
         }
         div p {text-align: end;} /*文字對主軸的相對位置-尾*/
+        .item{
+            width: 1000px;
+            height: 200px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: auto;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        .cards{
+            width: 490px;
+            
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .cards *{
+            margin: 0;
+        }
+        .cards div{
+            width: 300px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .cards img{
+            border-radius: 100px;
+        }
+
+        .result{
+            width: 1000px;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            margin: auto;
+            gap: 10px;
+        }
+        .recard{
+            display: flex;
+            gap: 10px;
+        }
+        .recard img{
+            width: 50px;
+            height: 50px;
+            margin: 30px 0;
+        }
+        .recard p{
+            text-align: left;
+            padding: 5px;
+        }
     </style>
 </head>
 
@@ -54,6 +107,52 @@
             </div>
             <img src="https://fakeimg.pl/150x150/150">
 
+        </div>
+    </div>
+    <div class="item">
+        <div class="cards card1">
+            <div>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae deleniti harum, enim qui tempora placeat. Amet corporis adipisci consectetur molestiae quo qui esse beatae atque reprehenderit expedita architecto, harum voluptate.
+                <p>-Kitty Merry<br>2023.2.28</p>
+            </div>
+            <img src="https://picsum.photos/100/100/?random=10">
+        </div>
+        <div class="cards card2">
+            <div>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore culpa quis similique, fuga ducimus eligendi vitae eaque eius adipisci aliquid doloribus. Magni consectetur quaerat debitis in vel recusandae placeat quo.
+                <p>-Kitty Merry<br>2023.2.28</p>
+            </div>
+            <img src="https://picsum.photos/100/100/?random=10">
+        </div>
+    </div>
+    <div class="result">
+        <div class="recard">
+            <img src="https://picsum.photos/100/100/?random=10">
+            <div>
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eligendi suscipit at veritatis voluptate ex laudantium ipsam incidunt consequatur esse. Itaque id omnis sunt odio? Vel aperiam necessitatibus provident eveniet.</p>
+            </div>
+        </div>
+        <div class="recard">
+            <img src="https://picsum.photos/100/100/?random=10">
+            <div>
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eligendi suscipit at veritatis voluptate ex laudantium ipsam incidunt consequatur esse. Itaque id omnis sunt odio? Vel aperiam necessitatibus provident eveniet.</p>
+            </div>
+        </div>
+        <div class="recard">
+            <img src="https://picsum.photos/100/100/?random=10">
+            <div>
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eligendi suscipit at veritatis voluptate ex laudantium ipsam incidunt consequatur esse. Itaque id omnis sunt odio? Vel aperiam necessitatibus provident eveniet.</p>
+            </div>
+        </div>
+        <div class="recard">
+            <img src="https://picsum.photos/100/100/?random=10">
+            <div>
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eligendi suscipit at veritatis voluptate ex laudantium ipsam incidunt consequatur esse. Itaque id omnis sunt odio? Vel aperiam necessitatibus provident eveniet.</p>
+            </div>
         </div>
     </div>
 </body>

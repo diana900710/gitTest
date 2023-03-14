@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            --gap: 15px
+        }
+        .container{
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 var(--gap);
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 calc( var(--gap) * -1);
+        }
+        [class*="col-"]{
+            padding-left: var(--gap);
+            padding-right: var(--gap);
+            padding-bottom: var(--gap);
+            box-sizing: border-box;
+        }
+        .col-1{width: 8.333333%;}
+        .col-2{width: 16.666666%;}
+        .col-3{width: 25%;}
+        .col-4{width: 33.333333%;}
+        .col-5{width: 41.666666%;}
+        .col-6{width: 50%;}
+        .col-7{width: 58.333333%;}
+        .col-8{width: 66.666666%;}
+        .col-9{width: 75%;}
+        .col-10{width: 83.333333%;}
+        .col-11{width: 91.666666%;}
+        .col-12{width: 100%;}
+        @media screen and (width >=768px) {
+            .col-md-1{width: 8.333333%;}
+            .col-md-2{width: 16.666666%;}
+            .col-md-3{width: 25%;}
+            .col-md-4{width: 33.333333%;}
+            .col-md-5{width: 41.666666%;}
+            .col-md-6{width: 50%;}
+            .col-md-7{width: 58.333333%;}
+            .col-md-8{width: 66.666666%;}
+            .col-md-9{width: 75%;}
+            .col-md-10{width: 83.333333%;}
+            .col-md-11{width: 91.666666%;}
+            .col-md-12{width: 100%;}
+        }
+        @media screen and (width >=1024px) {
+            .col-wi-1{width: 8.333333%;}
+            .col-wi-2{width: 16.666666%;}
+            .col-wi-3{width: 25%;}
+            .col-wi-4{width: 33.333333%;}
+            .col-wi-5{width: 41.666666%;}
+            .col-wi-6{width: 50%;}
+            .col-wi-7{width: 58.333333%;}
+            .col-wi-8{width: 66.666666%;}
+            .col-wi-9{width: 75%;}
+            .col-wi-10{width: 83.333333%;}
+            .col-wi-11{width: 91.666666%;}
+            .col-wi-12{width: 100%;}
+        }
+        @media screen and (width >=1200px) {
+            .col-xl-1{width: 8.333333%;}
+            .col-xl-2{width: 16.666666%;}
+            .col-xl-3{width: 25%;}
+            .col-xl-4{width: 33.333333%;}
+            .col-xl-5{width: 41.666666%;}
+            .col-xl-6{width: 50%;}
+            .col-xl-7{width: 58.333333%;}
+            .col-xl-8{width: 66.666666%;}
+            .col-xl-9{width: 75%;}
+            .col-xl-10{width: 83.333333%;}
+            .col-xl-11{width: 91.666666%;}
+            .col-xl-12{width: 100%;}
+        }
+
+        .card{
+            position: relative;
+        }
+        .card img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .card .text{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0007;
+            color: #fff;
+            padding: var(--gap);
+            box-sizing: border-box;
+        }
+        
+        .wrap{
+            padding: 0 var(--gap);
+            flex-direction: row-reverse;
+        }
+        .img{
+            width: 33%;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        .wrap img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .wrap .text{
+            width: 67%;
+        }
+        @media screen and (width < 1200px) {
+            .wrap{
+                flex-direction: column;
+            }
+            .img{
+                margin: auto;
+                width: 50%;
+            }
+            .wrap .text{
+                margin: auto;
+                text-align: center;
+                padding-top: var(--gap);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-xl-4">
+                        <div class="card">
+                            <img src="https://picsum.photos/200/300/?random=10">
+                            <div class="text">
+                                <h1>title</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="card">
+                            <img src="https://picsum.photos/200/300/?random=10">
+                            <div class="text">
+                                <h1>title</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="card">
+                            <img src="https://picsum.photos/200/300/?random=10">
+                            <div class="text">
+                                <h1>title</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-xl-6">
+                        <div class="wrap row">
+                            <div class="img"><img src="https://picsum.photos/100/100/?random=10"></div>
+                            <div class="text">
+                                <h1>title</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <div class="wrap row">
+                            <div class="img"><img src="https://picsum.photos/100/100/?random=10"></div>
+                            <div class="text">
+                                <h1>title</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

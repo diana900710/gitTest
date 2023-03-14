@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            --gap: 15px /*自定義屬性*/
+        }
+        .container{
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 var(--gap);
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 calc( var(--gap) * -1);
+        }
+        [class*="col-"]{ /*選取包含"col-"的class*/
+            padding-left: var(--gap);
+            padding-right: var(--gap);
+            box-sizing: border-box;
+        }
+        .col-1{width: 8.333333%;}
+        .col-2{width: 16.666666%;}
+        .col-3{width: 25%;}
+        .col-4{width: 33.333333%;}
+        .col-5{width: 41.666666%;}
+        .col-6{width: 50%;}
+        .col-7{width: 58.333333%;}
+        .col-8{width: 66.666666%;}
+        .col-9{width: 75%;}
+        .col-10{width: 83.333333%;}
+        .col-11{width: 91.666666%;}
+        .col-12{width: 100%;}
+
+        .card{
+            height: 100px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="card"></div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-3"><div class="card"></div></div>
+                    <div class="col-3"><div class="card"></div></div>
+                    <div class="col-3"><div class="card"></div></div>
+                    <div class="col-3"><div class="card"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

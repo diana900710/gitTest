@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .arrow{
+            width: 300px;
+            height: 200px;
+                                            /*角度deg-順時針(to 方向 方向-對角準確), 色標 位置, 色標 位置*/
+            background-image: linear-gradient(183deg,  #000, rgba(0, 0, 0, 0.807) 20%);
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 40px;
+            background-color: #fa0;
+            transform: scale(1); /*放大縮小(不影響排版)*/
+        }
+        .box:hover{
+            transform: scale(1.2);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .card{
+            width: 300px;
+            position: relative; /*相對定位*/
+            margin: 10px;
+            overflow: hidden;
+        }
+        .card img{
+            width: 100%;
+            vertical-align: top;
+
+            transform: scale(1);
+            transition: 10s linear; /*動態時間*/
+        }
+        .card .text{
+            /*絕對定位*/
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            
+            padding: 15px;
+            background-color: #0008;
+            color: #fff;
+            /*flex*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .text p{
+            color: #fff0;
+            transition: 2s linear; /*動態時間*/
+        }
+        .card:hover img{
+            transform: scale(1.4);
+        }
+        .text:hover p{
+            color: #fff;
+        }
+        .parent{
+            width: 600px;
+            height: 400px;
+            background-color: #ccc;
+            display: grid; /*網格*/      /*自動均分(份數, 長度)*/
+            grid-template-columns: 200px repeat(4, 70px); /*欄*/
+            grid-template-rows: repeat(4, 1fr); /*列*/
+            gap: 4px;
+
+            /* justify-content: space-between; */
+            /* align-content: end; */
+            justify-items: center;
+            align-items: center;
+        }
+        
+        .item{
+            font-size: 32px;
+            width: 50px;
+            height: 50px;
+            /* margin: 0; */
+        }
+        .item1{ 
+            background-color: #fa0; 
+            /*grid-column: 1 / span 4; /*起始 / 結束(span跳幾格)-從右邊數則負*/
+            /* grid-row: 2 / span 3; */
+        }
+        .item2{ 
+            background-color: #f0a; 
+            /* grid-column: 2 / 3; */
+            /* grid-row: 1 / 4; */
+        }
+    </style>
+</head>
+<body>
+    <div class="arrow"></div>
+    <div>
+        <div class="box"></div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, beatae! Laboriosam nulla quam modi temporibus vitae nam! Minima, atque, voluptate alias autem maxime quae esse accusantium, rerum incidunt molestiae voluptatibus!
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/300/200/?random=10">
+        <div class="text">
+            <h1>title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate veniam omnis magni voluptatibus ipsa! Aliquam ratione beatae, et incidunt repellendus ut ipsam unde ex saepe, quibusdam, nisi non numquam optio!</p>
+        </div>
+    </div>
+    <div class="parent">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+    </div>
+</body>
+</html>

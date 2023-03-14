@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            margin: auto;
+        }
+        .item{
+            width: auto;
+            height: 100px;
+            margin: 10px;
+            background-color: #b0a;
+        }
+        @media screen and (width >= 768px) {
+            .wrap{
+                max-width: 1200px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .item{
+                /*更方便計算每欄不包含間距的寬度*/
+                width: calc(100% / 4 - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <!-- <div class="item"></div>
+        <div class="item"></div> -->
+    </div>
+</body>
+</html>
